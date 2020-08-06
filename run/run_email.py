@@ -16,11 +16,11 @@ def send_mail(file_path):
 
     smtpserver = 'smtp.qq.com'
     # 设置登录邮箱的账号和授权密码
-    user = '275266056@qq.com'
-    password = "vvhxkgkoeofsbjeh"
-    sender = '275266056@qq.com'
+    user = 'XXX@qq.com'
+    password = "XXX"
+    sender = 'XXX@qq.com'
     # 可添加多个收件人的邮箱
-    receives = ['275266056@qq.com']
+    receives = ['XXX@qq.com']
     # 构造邮件对象
     msg = MIMEMultipart('mixed')
     # 定义邮件的标题
