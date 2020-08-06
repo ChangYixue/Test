@@ -1,0 +1,652 @@
+# fileName: api_config.yml
+
+host: https://XXX.com
+
+login_sandbox_email:
+  name: 【登录】邮箱登录
+  method: Post
+  url: /v1/login/
+  data:
+    phone_country:
+    phone_number:
+    email: 1@qq.com
+    password: 1234&qweR
+    device_id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+    device_name: Iphone8plus
+    device_pubkey: 3tVcBc1K0QmYnkwI7z7+s3ZL4kx0kYmEYERvMDZU/0k=
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+    Authorization: Basic MVFraTNxVHdmYlFQQ25nR0pibTAxaUk2dWhlWnZlM0o6Y1hZMThWZ00zQlNwajZ6amhrR05GdGpxam9iRTVOYUk=
+
+asset_main:
+  info: 资产模块部分接口需要重新抓包
+  name: 【资产】用户资产列表页
+  method: Get
+  url: /v2/assets/main/
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+  expected:
+    success: true
+    coin: BTC
+
+coin_info_HNS:
+  name: 【资产】币种基本信息
+  method: Get
+  url: /v1/wallet/for_coin/?coin=HNS
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+coin_info_BTC:
+  name: 【资产】币种基本信息
+  method: Get
+  url: /v1/wallet/for_coin/?coin=BTC
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+all_activities_BTC:
+  name: 【资产】全部记录列表
+  method: Get
+  url: /v1/wallet/home_activities/?coin=BTC&activity_type=all&load_more_ts=&activity_num=20
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+  expected:
+    success: true
+    display_code: BTC
+
+
+send_activities_BTC:
+  name: 【资产】发送记录列表
+  method: Get
+  url: /v1/wallet/home_activities/?coin=BTC&activity_type=send&load_more_ts=&activity_num=20
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+  expected:
+    success: true
+    display_code: BTC
+
+receive_activities_BTC:
+  name: 【资产】接收记录列表
+  method: Get
+  url: /v1/wallet/home_activities/?coin=BTC&activity_type=receive&load_more_ts=&activity_num=20
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+  expected:
+    success: true
+    display_code: BTC
+
+finance_activities_BTC:
+  name: 【资产】财富记录列表
+  method: Get
+  url: /v1/wallet/home_activities/?coin=BTC&activity_type=finance&load_more_ts=&activity_num=20
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+  expected:
+    success: true
+    display_code: BTC
+
+lending_activities_BTC:
+  name: 【资产】借贷记录列表
+  method: Get
+  url: /v1/wallet/home_activities/?coin=BTC&activity_type=lending&load_more_ts=&activity_num=20
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+  expected:
+    success: true
+    display_code: BTC
+
+mortgage_activities_BTC:
+  name: 【资产】币种借贷列表
+  method: Get
+  url: /v1/wallet/home_activities/?coin=BTC&activity_type=mortgage&load_more_ts=&activity_num=20
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+  expected:
+    success: true
+    display_code: BTC
+
+message_list:
+  name: 【资产】云端钱包公告
+  method: Get
+  url: /v1/cobo_message/list/?unread=0
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+all_coins:
+  name: 【资产】获取所有支持的币种
+  method: Get
+  url: /v1/wallet/coins/
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+pre_send_fee_LBTC_LBTC:
+  name: 【资产】获取某币种的交易费
+  method: Get
+  url: /v1/wallet/pre_send/?coin=LBTC_LBTC&address=&value=0&memo=
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+pre_send_fee_EDG:
+  name: 【资产】获取某币种的交易费
+  method: Get
+  url: /v1/wallet/pre_send/?coin=EDG&address=&value=0&memo=
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+pre_send:
+  name: 【资产】获取发币信息和交易费
+  method: Get
+  url: /v1/wallet/pre_send/?coin=HNS&address=hs1q8zpaydw95zy6wur2leeqf4dch5lelj34an26nu&value=2820000&memo=
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+get_verify_methods_internal:
+  name: 【资产】获取发币验证方法
+  method: Get
+  url: /v1/wallet/get_verify_methods/?coin=ETH_USDT&address=0xb7eb39b4c07ba6d9968a2c54bc22da3752409779&amount=300000&fee=0&gasprice=0&memo=internal
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+send_internal:
+  name: 【资产】发送发币请求（站内发币）
+  info: 发送发币请求之前，必须先发送"获取发币验证方法"请求
+  method: Post
+  url: /v1/wallet/send/
+  data:
+    coin: "ETH_USDT"
+    address: "0xb7eb39b4c07ba6d9968a2c54bc22da3752409779"
+    amount: 300000
+    fee: 0
+    gasprice: 0
+    memo: internal
+    payment_password: "123456"
+    action_id: ""
+    totp_code: ""
+    email_action_id: ""
+    email_auth_code: ""
+    phone_action_id: ""
+    phone_auth_code: ""
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+    Authorization: Bearer
+    app-version: 4.16.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+get_verify_methods_external:
+  name: 【资产】获取发币验证方法
+  method: Get
+  url: /v1/wallet/get_verify_methods/?coin=ETH_USDT&address=0x9ba56a4edf06b3561dd6bc29e53c9fb228495aa2&amount=100000&fee=76197&gasprice=11000000000&memo=external
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+send_external:
+  name: 【资产】发送发币请求（站外发币）
+  info: 发送发币请求之前，必须先发送"获取发币验证方法"请求
+  method: Post
+  url: /v1/wallet/send/
+  data:
+    coin: "ETH_USDT"
+    address: "0x9ba56a4edf06b3561dd6bc29e53c9fb228495aa2"
+    amount: 100000
+    fee: 76197
+    gasprice: 11000000000
+    memo: external
+    payment_password: "123456"
+    action_id: ""
+    totp_code: ""
+    email_action_id: ""
+    email_auth_code: ""
+    phone_action_id: ""
+    phone_auth_code: ""
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+    Authorization: Bearer
+    app-version: 4.16.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+tx_info:
+  name: 【资产】获取交易详情
+  method: Get
+  url: /v1/wallet/tx_info/?activity_id=10701017
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+mortgage_loan_main:
+  name: 【借贷】抵押借贷主页面
+  method: Get
+  url: /v1/mortgage_loan/main/
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+loan_list_all:
+  name: 【借贷】全部列表
+  method: Get
+  url: /v1/mortgage_loan/list/?mortgage_status=all&list_num=10&load_more_ts=
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+loan_list_in_progress:
+  name: 【借贷】未完成列表
+  method: Get
+  url: /v1/mortgage_loan/list/?mortgage_status=in_progress&list_num=10&load_more_ts=
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+loan_list_finished:
+  name: 【借贷】已完成列表
+  method: Get
+  url: /v1/mortgage_loan/list/?mortgage_status=finished&list_num=10&load_more_ts=
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+loan_rate_balance:
+  name: 【借贷】借款和质押币种的汇率和质押币种余额
+  info: PledgeSource = 1，所以余额是 cloud的值;返回值中balance代表所抵押币种余额
+  method: Get
+  url: /v1/mortgage_loan/get_coin_rate_and_balance/?loan_coin=BTC_USDT&pledge_coin=BTC&pledge_source=1
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+loan_lend_detail:
+  name: 【借贷】借贷页面详情
+  method: Get
+  url: /v1/mortgage_loan/lend_detail/
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+loan_lend:
+  name: 【借贷】发送借贷请求
+  method: Post
+  url: /v1/mortgage_loan/lend/
+  data:
+    payment_password: 123456
+    loan_amount: 1000000000
+    loan_coin: BTC_USDT
+    pledge_amount: 324676
+    pledge_coin: BTC
+    payback_duration: 30
+    payback_method: 2
+    daily_rate: 0.0005
+    pledge_source: 1
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+    Authorization: Bearer
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+    app-version: 4.8.0
+
+loan_auto_payback:
+  name: 【借贷】自动还款
+  method: Post
+  url: /v1/mortgage_loan/update_auto_payback/
+  data:
+    order_id: 202003171045425688977866720
+    auto_payback: 1
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+    Authorization: Bearer
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+    app-version: 4.8.0
+
+loan_auto_append:
+  name: 【借贷】自动补仓
+  method: Post
+  url: /v1/mortgage_loan/set_auto_append/
+  data:
+    order_id: 202003171045425688977866720
+    auto_append: 1
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+    Authorization: Bearer
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+    app-version: 4.8.0
+
+loan_order_info:
+  name: 【借贷】订单详情页
+  method: Get
+  url: /v1/mortgage_loan/order_info/?order_id=202003171045425688977866720
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+financial_list_products:
+  name: 【财富】财富产品列表
+  method: Get
+  url: /v1/rewards/financial/list_products_v2/
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+product_detail:
+  name: 【财富】财富产品详情
+  method: Get
+  url: /v1/rewards/financial/product_detail/?product_id=1
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+list_products_type:
+  name: 【财富】财富产品类型
+  method: Get
+  url: /v1/rewards/financial/list_products_by_type/?type=1
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+invested_products:
+  name: 【财富】我的财富列表
+  method: Get
+  url: /v1/rewards/financial/invested_products/
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+records_list:
+  name: 【财富】财富交易记录列表
+  method: Get
+  url: /v1/rewards/activity/records/?fund_flow=&production_type=&coin_code=
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+financial_invest:
+  name: 【财富】活期币计划
+  method: Post
+  url: /v1/rewards/financial/invest
+  data:
+    product_id: 45
+    auto_invest_next: 0
+    amount: 100000
+    payment_password: 123456
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+    Authorization: Bearer
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+    app-version: 4.8.0
+
+financial_invest_1:
+  name: 【财富】定期币计划
+  method: Post
+  url: /v1/rewards/financial/invest
+  data:
+    product_id: 44
+    auto_invest_next: 0
+    amount: 200000
+    payment_password: 123456
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+    Authorization: Bearer
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+    app-version: 4.8.0
+
+coin_pairs:
+  name: 【财富】闪兑-支持的兑换币种对
+  method: Get
+  url: /v1/exchange/coin_pairs/
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+pre_trade:
+  name: 【财富】闪兑-获取限额
+  method: Get
+  url: /v1/exchange/pre_trade/?coin=BTC
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+trade_info:
+  name: 【财富】闪兑-获取交易限额
+  method: Get
+  url: /v1/exchange/trade_info/?from_coin=ETH&to_coin=BTC
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+exchange_quote:
+  name: 【财富】闪兑-获取报价
+  method: Get
+  url: /v1/exchange/quote/?from_coin=ETH&to_coin=BTC&amount=1000000000000000000&to_amount=
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+exchange_trade:
+  name: 【财富】闪兑-确认交易
+  method: Post
+  url: /v1/exchange/trade/
+  data:
+    quote: 6c53dae0-a6c7-4ec7-976f-e344f3cecd57
+    broker: 1
+    payment_password: 123456
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+    Authorization: Bearer
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+    app-version: 4.8.0
+
+exchange_activities:
+  name: 【财富】闪兑-获取闪兑记录
+  method: Get
+  url: /v1/exchange/activities/?load_more_ts=&activity_num=20
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+tripple_main_info:
+  name: 【财富-囤币】囤币基本信息
+  method: Get
+  url: /v1/tripple/main_info/?coin=BTC&product_id=1
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+tripple_order_info:
+  name: 【财富-囤币】订单详情页
+  method: Get
+  url: /v1/tripple/order_info/?coin=BTC
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+coin_rate:
+  name: 【我的】人民币和各币种的比率
+  method: Get
+  url: /v1/wallet/coin_rate/?currency=CNY
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+quota_coin:
+  name: 【我的】kyc等级和限额
+  method: Get
+  url: /v1/wallet/quota/?coin=BTC
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+account:
+  name: 【我的】账户基本信息
+  method: Get
+  url: /v1/settings/account/
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+configs:
+  name: 【我的】账户菜单配置
+  method: Get
+  url: /v1/settings/configs/
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+currencies:
+  name: 【我的】默认货币列表
+  method: Get
+  url: /v1/settings/currencies/
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+list_device:
+  name: 【我的】账户与安全-设备管理
+  method: Get
+  url: /v1/new_device_login/list_device_infos/
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+contact_list:
+  name: 【我的】通用设置-地址簿列表
+  method: Get
+  url: /v1/contact/list/
+  headers:
+    Authorization: Bearer
+    app-version: 4.8.0
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+
+contact_edit:
+  name: 【我的】地址簿-编辑/修改已有地址
+  info: 是手机账号"18519261025"下的地址
+  method: Post
+  url: /v1/contact/edit/
+  data:
+    address_id: 42
+    coin: BTC
+    address: 3BgpUHBkDVSon167PM8kpoN5DwnL2brMKM
+    name: sandbox-2752
+    memo:
+    set_white_address: 0
+    payment_password:
+    email_action_id:
+    email_auth_code:
+    phone_action_id:
+    phone_auth_code:
+    totp_code:
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+    Authorization: Bearer
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+    app-version: 4.8.0
+
+contact_edit_email:
+  name: 【我的】地址簿-编辑/修改已有地址
+  info: 是邮箱账号"275266056@qq.com"下的地址
+  method: Post
+  url: /v1/contact/edit/
+  data:
+    address_id: 45
+    coin: BTC
+    address: 3PEnoVbfxEjGScx3vYZrHJBs2BocT2zy55
+    name: prod-185-BTC
+    memo:
+    set_white_address: 0
+    payment_password:
+    email_action_id:
+    email_auth_code:
+    phone_action_id:
+    phone_auth_code:
+    totp_code:
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+    Authorization: Bearer
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+    app-version: 4.8.0
+
+contact_add:
+  name: 【我的】地址簿-新增
+  method: Post
+  url: /v1/contact/add/
+  data:
+    coin: BTC
+    address: 3Ftdj6Dn6t32aQwKCJUb3Gn9W9M5yqb1Ea
+    name: ychang
+    memo:
+    set_white_address: 0
+    payment_password:
+    email_action_id:
+    email_auth_code:
+    phone_action_id:
+    phone_auth_code:
+    totp_code:
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+    Authorization: Bearer
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+    app-version: 4.8.0
+
+contact_remove:
+  name: 【我的】地址簿-删除
+  method: Post
+  url: /v1/contact/remove/
+  data:
+    address_id: 85
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+    Authorization: Bearer
+    device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+    app-version: 4.8.0
