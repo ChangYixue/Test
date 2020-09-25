@@ -52,7 +52,5 @@ if __name__ == "__main__":
     # print("================================== production登录 ==================================")
     # all_api.send_request("login_prod")
     # print("================================== sandbox登录 ==================================")
-    # all_api.send_request("login_sandbox_email")
-    print("================================== 其他接口 ==================================")
-    all_api.send_request("exchange_trade")
+    all_api.send_request("login_sandbox_email")
 
