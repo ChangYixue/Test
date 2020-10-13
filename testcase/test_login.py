@@ -16,7 +16,7 @@ class TestLogin(object):
         return all_login
 
     # 【登录】分别用邮箱、手机号登录
-    @pytest.mark.skip(reason="邮箱/手机号登录，暂时没必要执行该用例")
+    # @pytest.mark.skip(reason="邮箱/手机号登录，暂时没必要执行该用例")
     @pytest.mark.parametrize("api_name", ["login_sandbox_email", "login_sandbox_phoneNumber"])
     def test_login_01(self, api_name, init_login):
         print("\n 用例名称：输入正确用户名和密码后，响应内容：\n")
