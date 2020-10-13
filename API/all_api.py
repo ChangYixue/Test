@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 # fileName: app_api.py
+import sys
+sys.path.append(r"C:\Users\Administrator\PycharmProjects\ImoocAPI")
 from common.run_method import RunMethod
 from common.read_info import ReadYaml
 from common.get_log import get_log
