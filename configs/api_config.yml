@@ -1,6 +1,6 @@
 # fileName: api_config.yml
 
-host: https://wallet.sandbox.cobo.com
+host: https://XXX.com
 
 login_sandbox_email:
   name: 【登录】邮箱登录
@@ -9,7 +9,7 @@ login_sandbox_email:
   data:
     phone_country:
     phone_number:
-    email: ychang@cobo.com
+    email: 1@qq.com
     password: 1234&qweR
     device_id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
     device_name: Iphone8plus
