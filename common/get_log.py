@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 # fileName: get_log.py
+import sys
+sys.path.append(r"C:\Users\Administrator\PycharmProjects\ImoocAPI")
 import logging.config
 import logging
 
