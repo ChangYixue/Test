@@ -1,6 +1,6 @@
 # fileName: api_config.yml
 
-host: https://XXX.com
+host: https://wallet.sandbox.cobo.com
 
 login_sandbox_email:
   name: 【登录】邮箱登录
