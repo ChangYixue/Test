@@ -28,8 +28,6 @@ class TestAsset(object):
         # assert res['success'] is True, "success的值为: %s" % res['success']
         # assert res['status_code'] == expected['status_code'], "status_code的值为: %s" % res['status_code']
         assert res['success'] == expected['success'], "success的值为: %s" % res['success']
-        # 断言2：coin的值等于"BTC"
-        # assert res["result"]["wallets"][0]["coin"] == expected['coin'], "coin的值为：%s" % res["result"]["wallets"][0]["coin"]
 
 
 if __name__ == "__main__":

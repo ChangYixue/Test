@@ -28,4 +28,3 @@ asset_main:
     device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
   expected:
     success: true
-    coin: BTC
