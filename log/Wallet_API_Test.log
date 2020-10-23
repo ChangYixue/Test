@@ -1,1 +1,2 @@
-添加日志01
+添加日志012020-10-23 16:54:40,481 - all_api.py - INFO - [line:39] - 接口访问出错啦~ HTTPSConnectionPool(host='192.168.1.200', port=443): Max retries exceeded with url: //otc/coin/list (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10b731dd0>: Failed to establish a new connection: [Errno 60] Operation timed out'))
+2020-10-23 16:57:59,595 - all_api.py - INFO - [line:39] - 接口访问出错啦~ HTTPSConnectionPool(host='192.168.1.200', port=443): Max retries exceeded with url: /otc/coin/list (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10a71f390>: Failed to establish a new connection: [Errno 60] Operation timed out'))

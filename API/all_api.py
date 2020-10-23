@@ -54,5 +54,5 @@ if __name__ == "__main__":
     # print("================================== production登录 ==================================")
     # all_api.send_request("login_prod")
     # print("================================== sandbox登录 ==================================")
-    all_api.send_request("login_sandbox_email")
+    all_api.send_request("unlogin_otc_list")
 

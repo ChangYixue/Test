@@ -1,6 +1,13 @@
 # fileName: api_config.yml
 
-host: https://XXX.com
+host: https://XXX
+
+unlogin_otc_list:
+  name: 未登录法币列表接口
+  method: Get
+  url: /otc/coin/list
+  data:
+  headers:
 
 login_sandbox_email:
   name: 【登录】邮箱登录
@@ -10,13 +17,13 @@ login_sandbox_email:
     phone_country:
     phone_number:
     email: 1@qq.com
-    password: 1234&qweR
-    device_id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
+    password: 1
+    device_id:
     device_name: Iphone8plus
-    device_pubkey: 3tVcBc1K0QmYnkwI7z7+s3ZL4kx0kYmEYERvMDZU/0k=
+    device_pubkey:
   headers:
     Content-Type: application/x-www-form-urlencoded
-    Authorization: Basic MVFraTNxVHdmYlFQQ25nR0pibTAxaUk2dWhlWnZlM0o6Y1hZMThWZ00zQlNwajZ6amhrR05GdGpxam9iRTVOYUk=
+    Authorization: Basic
 
 asset_main:
   name: 【资产】用户资产列表页
@@ -28,3 +35,4 @@ asset_main:
     device-id: FE6C89E6-1B18-43C3-B9B9-CA2D773D64D8
   expected:
     success: true
+

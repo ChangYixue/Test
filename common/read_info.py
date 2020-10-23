@@ -46,8 +46,8 @@ class ReadYaml(object):
         if api_name == "login":
             return content[api_name]['headers']
         else:
-            auth = content[api_name]['headers']['Authorization']+' '+read_token()
-            content[api_name]['headers']['Authorization'] = auth
+            # auth = content[api_name]['headers']['Authorization']+' '+read_token()
+            # content[api_name]['headers']['Authorization'] = auth
             return content[api_name]['headers']
 
     # 获取响应结果的预期结果
