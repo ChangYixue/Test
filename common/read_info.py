@@ -4,6 +4,7 @@ from common import base
 import yaml
 from common.deal_token import read_token
 import os
+import time
 
 
 class ReadYaml(object):
@@ -57,8 +58,14 @@ class ReadYaml(object):
         # print(expected, type(expected), expected["success"], expected["decimal"])
         return expected
 
+    def get_time(self):
+        # 以毫秒为单位的时间戳
+        get_now_milli_time = int(time.time() * 1000)
+        print(get_now_milli_time)
+
 
 if __name__ == "__main__":
     # read_yml()
     ry = ReadYaml()
-    ry.is_login("login_prod")
+    # ry.is_login("login_prod")
+    ry.get_time()
